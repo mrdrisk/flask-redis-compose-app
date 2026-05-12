@@ -1,68 +1,117 @@
-\# Flask Redis Docker Compose App
+# Flask Redis Docker Compose App
 
+## Beginner DevOps Portfolio Project
 
+A multi-container application built with Flask, Redis, Docker Compose, and GitHub Actions.
 
-A beginner DevOps project demonstrating a multi-container application using Flask, Redis, Docker, Docker Compose, and GitHub Actions.
+---
 
+## Features
 
+- Flask web application
+- Redis-backed page counter
+- Docker containerization
+- Multi-container setup with Docker Compose
+- CI automation using GitHub Actions
 
-\## Project Overview
+---
 
+## Tech Stack
 
+| Technology | Purpose |
+|---|---|
+| Python | Backend language |
+| Flask | Web framework |
+| Redis | In-memory database |
+| Docker | Containerization |
+| Docker Compose | Multi-container orchestration |
+| GitHub Actions | CI automation |
 
-This project runs a Flask web application and a Redis database as separate containers using Docker Compose.
+---
 
+## Application Preview
 
+### Homepage
 
-The Flask app connects to Redis and increments a page view counter every time the homepage is refreshed.
+![App Screenshot](images/app-screenshot.png)
 
+---
 
+## Project Structure
 
-\## Tech Stack
+```text
+flask-redis-compose-app/
+├── .github/
+│   └── workflows/
+│       └── docker-compose.yml
+├── Dockerfile
+├── docker-compose.yml
+├── app.py
+├── requirements.txt
+└── README.md
+```
 
+---
 
+## Running the Application
 
-\- Python
-
-\- Flask
-
-\- Redis
-
-\- Docker
-
-\- Docker Compose
-
-\- GitHub Actions
-
-
-
-\## Features
-
-
-
-\- Multi-container Docker Compose setup
-
-\- Flask web application
-
-\- Redis-backed page counter
-
-\- Health check endpoint
-
-\- Automated CI workflow using GitHub Actions
-
-
-
-\## How to Run
-
-
-
-Clone the repository:
-
-
+### Start Containers
 
 ```bash
+docker compose up --build
+```
 
-git clone https://github.com/mrdrisk/flask-redis-compose-app.git
+### Stop Containers
 
-cd flask-redis-compose-app
+```bash
+docker compose down
+```
+
+### Access the App
+
+```text
+http://localhost:5000
+```
+
+---
+
+## GitHub Actions CI
+
+This project automatically:
+
+- Builds the Docker containers
+- Starts the services
+- Tests the Flask application
+- Verifies the health endpoint
+
+on every push to the `main` branch.
+
+---
+
+## What I Learned
+
+- Docker image creation
+- Docker Compose networking
+- Container communication
+- Redis integration
+- CI/CD basics with GitHub Actions
+- Health checks and service validation
+
+---
+
+## Future Improvements
+
+- Add persistent Redis volumes
+- Add Nginx reverse proxy
+- Deploy to Azure
+- Add monitoring with Prometheus/Grafana
+- Add automated testing with pytest
+
+---
+
+## Author
+
+**Matt Driscoll**
+
+GitHub: https://github.com/mrdrisk
 
